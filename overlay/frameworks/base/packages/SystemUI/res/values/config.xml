@@ -34,8 +34,12 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
          The display is dozing in a low power state; it is still on but is
          optimized for showing system-provided content while the device is
          non-interactive. -->
-    <bool name="doze_display_state_supported">true</bool>    
+    <bool name="doze_display_state_supported">true</bool>   
+ 
     <!-- Threshold in micro watts above which a charger is rated as "fast"; 2.16A @ 5V  -->
     <integer name="config_chargingFastThreshold">10800000</integer>
 
+    <!-- If not empty, sets the AVC codec profile level used for the internal screen recorder.
+        Possible values: 3, 3.1, 3.2, 4, 4.1, 4.2 -->
+   <string name="config_screenRecorderAVCProfileLevel" translatable="false">3.1</string>
 </resources>
