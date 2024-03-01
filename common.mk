@@ -74,6 +74,10 @@ USE_DEX2OAT_DEBUG := false
 # Dex
 PRODUCT_DEX_PREOPT_DEFAULT_COMPILER_FILTER := speed-profile
 
+# ART lowmem config
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.config.art_lowmem=true
+
 # Dexpreopt
 PRODUCT_DEXPREOPT_SPEED_APPS += \
     TrebuchetQuickStep \
