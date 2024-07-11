@@ -15,7 +15,7 @@ bluetooth.profile.asha.central.enabled=true
 bluetooth.profile.a2dp.source.enabled=true
 bluetooth.profile.avrcp.target.enabled=true
 bluetooth.profile.bas.client.enabled=true
-# bluetooth.profile.gatt.enabled=true
+bluetooth.profile.gatt.enabled=true
 bluetooth.profile.hfp.ag.enabled=true
 bluetooth.profile.hid.device.enabled=true
 bluetooth.profile.hid.host.enabled=true
@@ -28,9 +28,6 @@ bluetooth.profile.sap.server.enabled=true
 
 ## Dalvik
 dalvik.vm.dex2oat64.enabled=true
-
-## FRP
-ro.frp.pst=/dev/block/persistent
 
 ## Graphics
 ro.hardware.egl=mali
@@ -48,16 +45,13 @@ ro.surface_flinger.use_color_management=true
 
 ## Samsung specific
 ro.product_ship=true
-ro.vendor.sec.radio.def_network=10,10
-ro.debug_level=0x494d
-ro.hardware.chipname=exynos9611
-ro.build.PDA=A515FXXU5GVK6
 
 ## RIL
 vendor.sec.rild.libpath=/vendor/lib64/libsec-ril.so
 vendor.sec.rild.libpath2=/vendor/lib64/libsec-ril-dsds.so
 ro.telephony.default_network=10,10
 ro.config.vc_call_vol_steps=10
+ro.vendor.sec.radio.def_network=10,10
 
 # Set csc support in OMX
 # If not set or set to 0, OMX will only use BT.601 colorspace.
@@ -67,13 +61,6 @@ ro.vendor.cscsupported=1
 ro.vendor.vibrator_hal.click_duration=50
 ro.vendor.vibrator_hal.tick_duration=45
 ro.vendor.vibrator_hal.texture_tick_duration=30
-
-## CSC
-ro.csc.country_code=Romania
-ro.csc.countryiso_code=RO
-ro.csc.omcnw_code=ROM
-ro.csc.omcnw_code2=ROM
-ro.csc.sales_code=ROM
 
 ## SoC
 ro.soc.manufacturer=Samsung
