@@ -179,6 +179,7 @@ PRODUCT_PACKAGES += \
 # OMX
 PRODUCT_PACKAGES += \
     libstagefrighthw \
+    libstagefright_softomx_plugin.vendor \
     libExynosOMX_Core \
     libExynosOMX_Resourcemanager \
     libOMX.Exynos.AVC.Decoder \
