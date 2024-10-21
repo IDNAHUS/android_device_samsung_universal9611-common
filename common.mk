@@ -320,7 +320,8 @@ PRODUCT_PACKAGES += \
 # VNDK
 PRODUCT_PACKAGES += \
     libnetutils.vendor:64 \
-    libsqlite.vendor:64
+    libsqlite.vendor:64 \
+    libcrypto-v33
 
 # Sensors
 PRODUCT_PACKAGES += \
