@@ -51,17 +51,11 @@ PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/audio/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_configuration.xml
 
 # Biometric Fingerprint
-ifeq ($(TARGET_HAS_FOD),true)
-PRODUCT_PACKAGES += \
-     android.hardware.biometrics.fingerprint@2.3-service-samsung.universal9611 \
-     UdfpsHandler9611
-else
 PRODUCT_PACKAGES += \
      android.hardware.biometrics.fingerprint-service.samsung
 
 PRODUCT_COPY_FILES += \
      $(COMMON_PATH)/configs/keylayout/uinput-sec-fp.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/uinput-sec-fp.kl
-endif
 
 # Bluetooth
 PRODUCT_PACKAGES += \
@@ -242,11 +236,6 @@ PRODUCT_PACKAGES += \
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(COMMON_PATH)/overlay
 DEVICE_PACKAGE_OVERLAYS += $(COMMON_PATH)/overlay-lineage
-ifeq ($(TARGET_HAS_FOD),true)
-DEVICE_PACKAGE_OVERLAYS += $(COMMON_PATH)/overlay-fod
-else
-DEVICE_PACKAGE_OVERLAYS += $(COMMON_PATH)/overlay-nofod
-endif
 
 PRODUCT_ENFORCE_RRO_TARGETS += framework-res SystemUI SettingsProvider CarrierConfig
 
@@ -348,14 +337,6 @@ PRODUCT_PACKAGES += \
 # Sensors
 PRODUCT_PACKAGES += \
     android.hardware.sensors-service.samsung-multihal
-
-ifeq ($(TARGET_HAS_FOD),true)
-PRODUCT_PACKAGES += \
-    sensors.samsung
-
-PRODUCT_COPY_FILES += \
-    $(COMMON_PATH)/sensors/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf
-endif
 
 # Shims
 PRODUCT_PACKAGES += \
