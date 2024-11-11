@@ -64,7 +64,7 @@ BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOTIMG_HEADER_VERSION)
 BOARD_MKBOOTIMG_ARGS += --second_offset $(BOARD_SECOND_OFFSET)
 
 # Kernel config
-TARGET_KERNEL_CONFIG := $(addprefix vendor/, $(TARGET_DEVICE)_defconfig $(TARGET_DEVICE).config grass.config aosp.config)
+TARGET_KERNEL_CONFIG := exynos9611-$(TARGET_DEVICE)_defconfig
 
 # Broken Build Rules
 BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
